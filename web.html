@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewpoint" content="width=device-width,initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<title>universitywebpage deisgn</title>
+<style>
+*{
+margin=0;
+padding=0;
+}
+.header{
+min-height:100vh;
+width:100%;
+background-image:linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(iubat-back.jpg);
+background-size:cover;
+background-position:center;
+position:relative;
+
+
+
+
+}
+nav{
+display:flex;
+padding:2% 6%;
+justify-content:space-between;
+align-items:center;
+}
+nav img{
+width:150px;
+}
+
+
+
+
+.nav-links{
+flex:1;
+text-align:right;
+
+
+
+
+}
+.nav-links ul li{
+list-style:none;
+display:inline-block;
+padding:8px 2px;
+position:relative;
+}
+.nav-links ul li a{
+text-decoration:none;
+font-size:13px;
+ color: aliceblue;
+}
+.nav-links ul li::after{
+content:' ';
+width:0%;
+height:2px;
+display:block;
+margin:auto;
+background:#f44336;
+transition:0.5s;
+}
+.nav-links ul li:hover::after{
+width:100%;
+}
+.text-box{
+width:90%;
+color:#fff;
+position:absolute;
+margin-top:5%;
+text-align:center;
+
+
+
+
+}
+.text-box h1{
+font-size:62px;
+color:aliceblue;
+}
+.text-box p{
+margin:10px 0px 40px;
+font-size:14px;
+color:antiquewhite;
+
+
+}
+.hero-btn{
+display:inline-block;
+text-decoration: none;
+color:#fff;
+border:1px solid #fff;
+padding:12px 34px;
+font-size:13px;
+position:relative;
+cursor:pointer;
+background:transparent;
+   
+}
+.hero-btn:hover{
+border:1px solid #f44336;
+background:#f44336;
+transition:1s;
+}
+    nav.fa{
+       
+        dispplay:none;
+    }
+
+
+ @media(max-width:700px){
+     .text-box{
+       font-size:20px;
+     }
+     
+     .nav-links ul li{
+         
+         display: block;
+     }
+     .nav-links{
+         
+        position:absolute;
+         background:#f44336;
+         height: 100vh;
+         width:200px;
+         top:0;
+         right:-200px;
+         text-align:left;
+     }
+     
+     nav.fa{
+         display:block;
+         color:#fff;
+         margin:10px;
+         font-size:22px;
+         corsor:pointer;
+     }
+     
+     .nav-links ul{
+         padding:30px;
+     }
+    }
+
+
+/*-----course----*/
+.course{
+width:80%;
+margin:auto;
+text-align:center;
+padding-top:100px;
+}
+h1{
+font-size:36px;
+font-weight:600;
+}
+p{
+color:#1c1b22;
+font-size:14px;
+font-weight:300;
+line-height:22px;
+padding:10px;
+}
+.row{
+    margin:5%;
+    display:flex;
+    justify-content: space-between;  
+}
+.course-col{
+    flex-basis:31%;
+    background:#fddfdf;
+    border-radius:10px;
+    margin-bottom:5px;
+    padding:20px 12px;
+    box-sizing:border-box;
+    transition:0.5s;
+}
+h3{
+    text-align:center;
+    font-weight:600;
+    margin:10px 0;
+}
+.course-col:hover{
+    box-shadow:0 0 20px 0px rgba(0,0,0,0.2 )
+}
+@media(max-width:700px){
+.row{
+    flex-direction:column;
+}
+}
+/*---campus---*/
+.campus{
+    width:80%;
+text-align:center;
+padding-top: 5%;
+margin:auto;
+}
+
+    .campus-col{
+        flex-basis: 32%;
+        border-radius:10px;
+        margin-bottom: 30px;
+        position:relative;
+        overflow: hidden;
+    }
+
+    .campus-col img{
+      width: 100%;  
+        display: block;
+        
+    }
+
+    .layer{
+     background:transparent;
+        height:100%;
+        width:100%;
+        position:absolute;
+        top:0;
+        left:0;
+        transition:0.5s;
+        
+    }
+
+    .layer:hover{
+         background:#f7ee97;
+        opacity:0.5;
+    }
+
+    .layer h3{
+        width:100%;
+        font-weight: 100%;
+        color:azure;
+        font-size:26px;
+        bottom: 0;
+        transfrom:translatex(50%);
+        position:absolute;
+        transition:0.5%;
+    
+    }
+    .layer:hover h3{
+        bottom:35;
+        color: blueviolet;
+    }
+  /*---faculties---*/
+    .Faculties{
+        text-align: center;
+        padding-top:10%;
+       width:80%; 
+        margin:auto;
+        
+    }  
+
+    .faculties-col{
+      flex-basis: 31%;
+      border-radius:10px;
+        margin-bottom:5%;
+        text-align: left;
+        
+        
+    }
+
+    .faculties-col img{
+        width:100%;
+        border-radius: 10px;
+    }
+
+    .faculties-col p{
+     padding:0;      
+    }
+    .faculties-col h3{
+        margin-top:16px;
+        margin-bottom: :15px;
+        text-align: center;
+    }  
+    /*--testimonialas*/
+    .testimonialas{
+        width: 80%;
+        margin:auto;
+        text-align: center;
+        padding-top:5%;
+        
+    }
+    
+    .testimonial-col{
+     flex-basis:44%;
+        border-radius:10%;
+        margin-bottom:15%;
+        text-align:left;
+       background:#fff3f3;
+        cursor: pointer;
+        display: flex;
+        
+    }
+    
+    .testimonial-col img{
+       height: 40%; 
+        margin-bottom:15%;
+        margin-left: 5%;
+        margin-right: 30px;
+        border-radius: 50%;
+        
+    }
+    
+    .testimonial-col p{
+        padding: 0;
+    }
+    .testimonial-col h3{
+        margin-top: 15px;
+        text-align: left;
+    }
+    .testimonial-col.fa{
+        color:crimson;
+    }
+    @media(max-widt:700px) {
+        .testimonial-col img{
+      
+        margin-left: 0%;
+        margin-right: 15px;
+      
+        
+    }   
+        
+    } 
+    
+    
+   /*---call to action---*/
+    .action{
+   margin: 10px auto;
+        width:80%;
+        height:10%;
+  
+background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(admission_iubat-img.jpg);
+        background-position:center;
+        background-size:cover;
+        border-radius:10px;
+        text-align:center;
+        padding:100px 0;
+        
+        
+    }
+    .action h1{
+        color: antiquewhite;
+        margin-bottom: 40px;
+        padding:0;
+        
+    } 
+   /*----footer--*/
+    .footer{
+        
+        width: 100%;
+        text-align: center;
+        padding: 30px 0;
+    }
+    
+    .footer h4{
+        margin-bottom: 25px;
+        margin-top: 20px;
+        font-weight: 600;
+    }    
+    .icons.fa{
+     color: crimson;
+        margin:0 13px;
+        cursor:pointer;
+        padding:18px 0;    
+    }
+    
+    .fa-heart-o{
+        color:#f44336;
+    }
+    
+    
+</style>
+</head>
+<body>
+<section class="header">
+<nav>
+<a href="index.html"><img src="iubat-logo.png"></a>
+<div class="nav-links"id="navlinks">
+<i class="fa fa-times" onclick="hidemenu()"></i>
+<ul>
+<li><a href=" ">Home</a></li>
+<li><a href=" ">About</a></li>
+<li><a href=" ">Course</a></li>
+<li><a href=" ">Blog</a></li>
+<li><a href=" ">Contact</a></li>
+</ul>
+</div>
+<i class="fa fa-bars" onclick="showmenu()"></i>
+</nav>
+<div class="text-box">
+<h1>#1401 universities in the world</h1>
+<p>Higher Education for Every Qualifie
+ Person with Finance<br> for Meritorious but Needy </p>
+<a href=" "class="hero-btn">visite us to know more</a>
+</div>
+</section>
+
+
+<section class="course">
+ <h1>Courses we offer</h1>  
+   <p>Programs & Fees. IUBAT warmly welcomes all students
+    who are interested in pursuing higher studies </p>
+<div class="row">
+<div class="course-col">
+<h3>Intermediate</h3>
+<p>Provides ample opportunities with advanced learning and research practices in
+ a specialized discipline to expand employability and to
+ comprehend the human and natural world.</p>
+</div>
+<div class="course-col">
+    <h3>Graduate</h3>
+    <p>Provides ample opportunities with advanced learning and research practices in
+     a specialized discipline to expand employability and to
+     comprehend the human and natural world.</p>
+    </div>
+    <div class="course-col">
+        <h3>Under Graduate</h3>
+        <p>Provides ample opportunities with advanced learning and research practices in
+         a specialized discipline to expand employability and to
+         comprehend the human and natural world.</p>
+        </div>
+
+
+</div>    
+</section>
+<!--campus-->
+<section class="campus">
+<h1> our green cumpus</h1>
+<p>IUBAT flourishes as a community of
+talented and masterly people from home and abroad</p>
+<div class="row">
+    <div class="campus-col">
+       <img src="iubat.cam.jpg"alt="iubat cam1"> 
+       <div class="layer">
+           <h3>Uttara</h3>
+       </div>
+    </div>
+     <div class="campus-col">
+       <img src="iubat-cam2.jpeg"alt="iubat cam1"> 
+       <div class="layer">
+           <h3>Uttara</h3>
+       </div>
+    </div>
+     <div class="campus-col">
+       <img src="iubat-cam3.jpg"alt="iubat cam1"> 
+       <div class="layer">
+           <h3>Uttara</h3>
+       </div>
+    </div>
+</div>
+</section>
+<!--faculties-->
+<section class="Faculties">
+   <h1>our facilties</h1>
+   <p>A thriving university with full of 
+    facilities and services which help 
+    students to grow and
+     keep engaged with campus life</p>
+     <div class="row">
+    <div class="faculties-col">
+       <img src="library.jpg">
+       <h3>our library is moderate</h3>
+       <p>The Student Study Arena and Open 
+       Auditorium is a comfortable area opens 
+       to students for gathering, studying, 
+       and relaxing between classes.</p>
+        
+    </div> 
+     
+     <div class="faculties-col">
+       <img src="basketball.jpg">
+       <h3>large playground</h3>
+       <p>The Student Study Arena and Open 
+       Auditorium is a comfortable area opens 
+       to students for gathering, studying, 
+       and relaxing between classes.</p>
+        
+    </div> 
+    <div class="faculties-col">
+       <img src="cafeteria.jpg">
+       <h3>our cafeteria is quite good</h3>
+       <p>The Student Study Arena and Open 
+       Auditorium is a comfortable area opens 
+       to students for gathering, studying, 
+       and relaxing between classes.</p>
+        
+    </div> 
+    </div>
+</section>
+
+<!--testimonialas-->
+
+<section class= "testimonialas">
+   <h1>what our students says</h1> 
+    <p>Campus Life is committed to helping students 
+    as they wrestle with issues they face, 
+    both big and small, while 
+    pursuing a balanced life</p>
+    
+    <div class="row">
+       
+       <div class="testimonial-col">
+          <img src="katherin.jpg">
+          <div>
+              <p>Campus Life is committed to helping students 
+    as they wrestle with issues they face, 
+    both big and small.Counselling service is
+         to support and assist in overcoming life’s 
+         challenges and moving towards positive change. </p>
+         <h3>Katherin</h3>
+         <i class="fa fa-star"></i>
+           <i class="fa fa-star"></i>
+           <i class="fa fa-star"></i>
+           <i class="fa fa-star"></i>
+           <i class="fa fa-star-o"></i>       
+
+          </div>
+           
+       </div>  
+       <div class="testimonial-col">
+          <img src="Walter_brennan.jpeg">
+          <div>
+              <p>Campus Life is committed to helping students 
+    as they wrestle with issues they face, 
+    both big and small.Counselling service is to
+         support and assist in overcoming life’s 
+         challenges and moving towards positive change. </p>
+         <h3>walter brennan</h3>
+          <i class="fa fa-star" aria-hidden="true"></i>
+           <i class="fa fa-star"></i>
+           <i class="fa fa-star"></i>
+           <i class="fa fa-star"></i>
+           <i class="fa fa-star-half-o"></i>  
+          </div>
+           
+       </div>   
+    </div>
+    
+</section>
+
+
+<!--call to action-->
+<sectin class="cta">
+  <div class="action">
+   <h1>Enroll for our varius courses <br>any where from the world</h1>
+   <a href=" " class="hero-btn">Contact us</a> 
+    </div> 
+</sectin>
+<!--footer-->
+<sectio class="footer">
+   <h4>About us</h4>
+   <p>The Student Study Arena and Open 
+       Auditorium is a comfortable area opens 
+       to students for <br>gathering, studying, 
+       and relaxing between classes.</p>
+       <div class="icons">
+          <i class="fa fa-facebook"></i>
+           <i class="fa fa-twitter"></i>
+           <i class="fa fa-instagram"></i>
+           <i class="fa fa-linkedin"></i>
+       </div>
+    <p>made with  <i class="fa fa-heart-o"></i>by smrity </p>
+    
+</sectio>
+
+
+
+<!--javascript for toggle menu-->
+<script>
+   
+  var navlinks=document.getelementById("navlinks");
+    function showmenu(){
+        navlinks.style.right="0";
+    }
+   
+function hidemenu(){
+        navlinks.style.right="-200px";
+    }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
